@@ -29,7 +29,7 @@ g++ main.cpp func.cpp -o main
 ./main    
 ```
 
-- Method2 (prefered):
+- **Method2 (prefered)**:
 ```bash
 g++ -c main.cpp // generate main.o
 g++ -c func.cpp // generate func.o
