@@ -14,8 +14,8 @@
 - **Lab1**：C++ Basics & Flow of Control
 
 - **Lab2**：C++ Function Basics
-    `g++ main.cpp func.cpp -o main`
-    `./main`
+
+    `g++ main.cpp func.cpp -o main` `./main`
 
 
 
