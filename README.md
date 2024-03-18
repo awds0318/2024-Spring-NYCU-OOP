@@ -39,3 +39,5 @@ g++ main.o func.o -o main
 ```
 
 ## **Lab3：C++ Array Transpose & Multiplication**
+
+## **Lab4：C++ Structure & Class (LIFO : Last in First out)**

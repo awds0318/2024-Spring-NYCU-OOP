@@ -16,7 +16,7 @@ class stack {
 
 	private:
 	// ======write your code======
-	Data array[8]; // 0~7
+	Data array[100]; 
 	int index{0};
 	// ===========================
 };
@@ -36,27 +36,22 @@ void stack::push(Data push_data)
 
 Data stack::pop()
 {	
-	Data a;
-	a = array[index-1];
+	Data pop_data;
+	pop_data = array[index-1];
 	index -= 1; 
 
-	return a;
+	return pop_data;
 }
 
 bool stack::empty()
 {
-	if(index == 0)
-		return 1;
-	else 
-		return 0;
+	return (!index)? 1 : 0;
 }
-// ===========================
 
 int main(){
 	// ======write your code======
-	// ===========================
 	Data data;
-	stack stack1;
+	stack container;
 	int operation;
 	while (true)
 	{
@@ -67,37 +62,33 @@ int main(){
 			cout << "push a number:" << endl;
 			cin >> data.value;
 			data.is_letter = 0;
-			stack1.push(data);
+			container.push(data);
 		}
 		else if (operation == 1)
 		{
 			cout << "push a letter:" << endl;
 			cin >> data.letter;
 			data.is_letter = 1;
-			stack1.push(data);
+			container.push(data);
 		}
 		else // if (operation == 2)
 		{
 			Data pop_data;
 			cout << "pop stack:" << endl;
 			
-			if(stack1.empty() == 1)
+			if(container.empty() == 1)
 			{
 				cout << "the stack is empty" << endl;
 				break;
 			}
 			else
 			{
-				pop_data = stack1.pop();
+				pop_data = container.pop();
 
 				if(pop_data.is_letter == 0)
-				{
 					cout << pop_data.value << endl;
-				}
-				else //  if (pop_data.is_letter == 1)
-				{
+				else 
 					cout << pop_data.letter << endl;
-				}
 			}
 		}
 	}
