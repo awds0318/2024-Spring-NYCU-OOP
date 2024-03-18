@@ -38,3 +38,4 @@ g++ main.o func.o -o main
 ./main
 ```
 
+## **Lab3：C++ Array Transpose & Multiplication**
