@@ -53,9 +53,10 @@ science science::reduced_form()
 
 // Finish the ctor and function definitions
 // ------------- Write Your Code Here ----------------- //
-ostream& operator<<(ostream& out, science& science)
+ostream& operator<<(ostream& out, science& z)
 {
-    out << science.reduced_form().a << " * 10 ^ " << science.reduced_form().n;
+	
+    out << z.reduced_form().a << " * 10 ^ " << z.reduced_form().n;
 
     return out;
 }
