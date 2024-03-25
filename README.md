@@ -42,5 +42,5 @@ g++ main.o func.o -o main
 
 ## **Lab4：C++ Structure & Class (LIFO : Last in First out)**
 
-## **Lab4：C++ Constructors & Operator Overloading**
+## **Lab5：C++ Constructors & Operator Overloading**
 
