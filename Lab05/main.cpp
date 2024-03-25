@@ -9,10 +9,10 @@ using namespace std;
 class science{
 	friend ostream& operator<<(ostream&out, science &sci);
 	friend istream& operator>>(istream&in, science &sci);
-	friend const science operator+(const science& science1, const science& science2);
-	friend const science operator-(const science& science1, const science& science2);
-	friend const science operator*(const science& science1, const science& science2);
-	friend const science operator/(const science& science1, const science& science2);
+	friend const science operator+(const science& src1, const science& src2);
+	friend const science operator-(const science& src1, const science& src2);
+	friend const science operator*(const science& src1, const science& src2);
+	friend const science operator/(const science& src1, const science& src2);
 private:
 	double a;   
 	int n;
@@ -25,10 +25,9 @@ public:
     // 
     // ------------------------------------------------ //
 	}
-	science reduced_form();
-  // Member function declarations
   // ------------- Write Your Code Here ------------- //
-  // ------------------------------------------------ //
+  // Member function declarations
+	science reduced_form();
 };
 
 science science::reduced_form()
@@ -53,10 +52,9 @@ science science::reduced_form()
 
 // Finish the ctor and function definitions
 // ------------- Write Your Code Here ----------------- //
-ostream& operator<<(ostream& out, science& z)
+ostream& operator<<(ostream& out, science& src)
 {
-	
-    out << z.reduced_form().a << " * 10 ^ " << z.reduced_form().n;
+    out << src.reduced_form().a << " * 10 ^ " << src.reduced_form().n;
 
     return out;
 }
@@ -72,16 +70,16 @@ istream& operator>>(istream& in, science& science)
 
 
 
-const science operator+(const science& science1, const science& science2)
+const science operator+(const science& src1, const science& src2)
 {
 	science temp;
 	int i, j, min_n;
 	double x, y;
-	min_n = min(science1.n, science2.n);
-	i = science1.n - min_n;
-	j = science2.n - min_n;
-	x = science1.a * pow(10, i);
-	y = science2.a * pow(10, j);
+	min_n = min(src1.n, src2.n);
+	i = src1.n - min_n;
+	j = src2.n - min_n;
+	x = src1.a * pow(10, i);
+	y = src2.a * pow(10, j);
 
 	temp.n = min_n;
 	temp.a = x + y;
@@ -89,16 +87,16 @@ const science operator+(const science& science1, const science& science2)
     return temp.reduced_form();
 }
 
-const science operator-(const science& science1, const science& science2)
+const science operator-(const science& src1, const science& src2)
 {
 	science temp;
 	int i, j, min_n;
 	double x, y;
-	min_n = min(science1.n, science2.n);
-	i = science1.n - min_n;
-	j = science2.n - min_n;
-	x = science1.a * pow(10, i);
-	y = science2.a * pow(10, j);
+	min_n = min(src1.n, src2.n);
+	i = src1.n - min_n;
+	j = src2.n - min_n;
+	x = src1.a * pow(10, i);
+	y = src2.a * pow(10, j);
 
 	temp.n = min_n;
 	temp.a = x - y;
@@ -106,22 +104,22 @@ const science operator-(const science& science1, const science& science2)
     return temp.reduced_form();
 }
 
-const science operator*(const science& science1, const science& science2)
+const science operator*(const science& src1, const science& src2)
 {
 	science temp;
 
-	temp.n = science1.n + science2.n;
-	temp.a = science1.a * science2.a;
+	temp.n = src1.n + src2.n;
+	temp.a = src1.a * src2.a;
 
     return temp.reduced_form();
 }
 
-const science operator/(const science& science1, const science& science2)
+const science operator/(const science& src1, const science& src2)
 {
 	science temp;
 
-	temp.n = science1.n - science2.n;
-	temp.a = science1.a / science2.a;
+	temp.n = src1.n - src2.n;
+	temp.a = src1.a / src2.a;
 
     return temp.reduced_form();
 }
