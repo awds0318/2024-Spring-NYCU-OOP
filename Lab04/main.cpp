@@ -1,22 +1,24 @@
 #include <iostream>
 using namespace std;
 
-struct Data {
+struct Data
+{
 	int value;
 	char letter;
 	bool is_letter;
 };
 
-class stack {
-	public:
-	stack (){};
-	void push (Data);
-	Data pop ();
-	bool empty ();
+class stack
+{
+public:
+	stack(){};
+	void push(Data);
+	Data pop();
+	bool empty();
 
-	private:
+private:
 	// ======write your code======
-	Data array[100]; 
+	Data array[100];
 	int index{0};
 	// ===========================
 };
@@ -26,29 +28,30 @@ class stack {
 void stack::push(Data push_data)
 {
 	array[index].is_letter = push_data.is_letter;
-	if(push_data.is_letter == 0)
+	if (push_data.is_letter == 0)
 		array[index].value = push_data.value;
-	else 
+	else
 		array[index].letter = push_data.letter;
 
 	index += 1;
 }
 
 Data stack::pop()
-{	
+{
 	Data pop_data;
-	pop_data = array[index-1];
-	index -= 1; 
+	pop_data = array[index - 1];
+	index -= 1;
 
 	return pop_data;
 }
 
 bool stack::empty()
 {
-	return (!index)? 1 : 0;
+	return (!index) ? 1 : 0;
 }
 
-int main(){
+int main()
+{
 	// ======write your code======
 	Data data;
 	stack container;
@@ -75,8 +78,8 @@ int main(){
 		{
 			Data pop_data;
 			cout << "pop stack:" << endl;
-			
-			if(container.empty() == 1)
+
+			if (container.empty() == 1)
 			{
 				cout << "the stack is empty" << endl;
 				break;
@@ -85,9 +88,9 @@ int main(){
 			{
 				pop_data = container.pop();
 
-				if(pop_data.is_letter == 0)
+				if (pop_data.is_letter == 0)
 					cout << pop_data.value << endl;
-				else 
+				else
 					cout << pop_data.letter << endl;
 			}
 		}
