@@ -14,7 +14,7 @@ void Replace(string& str, const string& sub, const string& mod)
 	while(found != string::npos) // ! Remeber, else will get error
 	{
 		str.replace(str.find(sub), sub.length(), mod);
-		found = str.find(sub); // ! Remeber, else will get error
+		found = str.find(sub);   // ! Remeber, else will get error
 	}
 }
 
