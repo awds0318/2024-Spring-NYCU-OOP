@@ -11,10 +11,10 @@ void Replace(string& str, const string& sub, const string& mod)
 	string tmp(str);
 	size_t found;
 	found = str.find(sub);
-	while(found != string::npos)
+	while(found != string::npos) // ! Remeber, else will get error
 	{
 		str.replace(str.find(sub), sub.length(), mod);
-		found = str.find(sub);
+		found = str.find(sub); // ! Remeber, else will get error
 	}
 }
 
