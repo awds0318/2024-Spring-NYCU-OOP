@@ -46,3 +46,5 @@ g++ main.o func.o -o main
 
 ## **Lab6：C++ Constructors & Operator Overloading**
 
+## **Lab7：C++ String**
+
