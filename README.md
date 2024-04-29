@@ -48,3 +48,4 @@ g++ main.o func.o -o main
 
 ## **Lab7：C++ String**
 
+## **Lab8：C++ Pointers and Dynamic Arrays**
