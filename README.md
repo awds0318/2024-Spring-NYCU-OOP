@@ -49,3 +49,11 @@ g++ main.o func.o -o main
 ## **Lab7：C++ String**
 
 ## **Lab8：C++ Pointers and Dynamic Arrays**
+
+## **Lab9：C++ Streams and File I/O**
+
+`#include <map>`
+> map like the dictionary in python, and it will auto sort itself.
+
+`#include <vector>`
+> we can implement `list.append` with using `vector.push_back`.
