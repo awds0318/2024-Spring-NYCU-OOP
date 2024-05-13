@@ -57,3 +57,5 @@ g++ main.o func.o -o main
 
 `#include <vector>`
 > we can implement `list.append` with using `vector.push_back`.
+
+## **Lab10：C++ Inheritance**
