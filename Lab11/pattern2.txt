@@ -1,0 +1,31 @@
+10
+Shape0
+triangle
+829 196 683
+Shape1
+triangle
+21 -258 -90
+Shape2
+circle
+909
+Shape3
+square
+470 470 470 470
+Shape4
+circle
+-353
+Shape5
+rectangle
+292 691 292 691
+Shape6
+rectangle
+264 923 264 923
+Shape7
+rectangle
+332 659 332 659
+Shape8
+square
+843 843 843 843
+Shape9
+rectangle
+-130 321 -495 -117
