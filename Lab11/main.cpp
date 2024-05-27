@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     int num_of_shapes, nTri{0}, nRec{0}, nSqu{0}, nCir{0};
     ifs >> num_of_shapes;
 
-    shape **sarry = new shape*[num_of_shapes];
+    shape **sarry = new shape *[num_of_shapes];
 
     for (int i = 0; i < num_of_shapes; ++i)
     {
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
             ifs >> a >> b >> c;
 
             sarry[i] = new triangle(a, b, c, NAME);
-            sarry[i] -> set_perimeter();
+            sarry[i]->set_perimeter();
         }
 
         if (TYPE == "rectangle")
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
             ifs >> a >> b >> c >> d;
 
             sarry[i] = new rectangle(a, b, c, d, NAME);
-            sarry[i] -> set_perimeter();
+            sarry[i]->set_perimeter();
         }
 
         if (TYPE == "square")
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
             ifs >> a >> b >> c >> d;
 
             sarry[i] = new square(a, b, c, d, NAME);
-            sarry[i] -> set_perimeter();
+            sarry[i]->set_perimeter();
         }
 
         if (TYPE == "circle")
@@ -61,16 +61,14 @@ int main(int argc, char *argv[])
             nCir += 1;
 
             ifs >> a;
-            
+
             circle cir(a, NAME);
             circle *ccir = &cir;
 
             sarry[i] = new circle(a, NAME);
-            sarry[i] -> set_perimeter();
+            sarry[i]->set_perimeter();
         }
-
     }
-    
 
     //=========================== Coding end ===========================//
 
@@ -88,21 +86,24 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < num_of_shapes; ++i)
     {
-        perimeter = sarry[i] -> get_perimeter();
-        if(perimeter == -1) continue;
-        else sarry[i] -> get_information();
+        perimeter = sarry[i]->get_perimeter();
+        if (perimeter == -1)
+            continue;
+        else
+            sarry[i]->get_information();
     }
-    
 
     cout << "[Illegal]" << endl;
     for (int i = 0; i < num_of_shapes; ++i)
     {
-        perimeter = sarry[i] -> get_perimeter();
-        if(perimeter != -1) continue;
-        else sarry[i] -> get_information();
+        perimeter = sarry[i]->get_perimeter();
+        if (perimeter != -1)
+            continue;
+        else
+            sarry[i]->get_information();
     }
 
-    delete [] sarry;
+    delete[] sarry;
 
     return 0;
 }
