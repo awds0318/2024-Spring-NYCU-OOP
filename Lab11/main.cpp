@@ -62,9 +62,6 @@ int main(int argc, char *argv[])
 
             ifs >> a;
 
-            circle cir(a, NAME);
-            circle *ccir = &cir;
-
             sarry[i] = new circle(a, NAME);
             sarry[i]->set_perimeter();
         }
